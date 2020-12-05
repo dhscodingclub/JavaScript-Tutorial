@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- this is the code that will allow icon to be visible in the title bar of the brower -->
+<link rel="icon" type="image/ico" href="../Logo.png" />
+<!-- you can also say this:  <link rel="icon" type="image/png" href="location/image.png" /> -->
+<h1 class="center-text">JavaScript Tutorial</h1>
+<div id="lesson"></div>
+<textarea id="code"></textarea>
+<button id="run">Run</button>
+<h2>Output Console</h2>
+<pre id="output"></pre>
+<link rel="stylesheet" href="../StyleSheet.css">
+<!--Import the lessons function from lessons.js file-->
+<script src="./lessons.js"></script>
+<script>
+    //start with lesson 0
+    var lessonNumber = 0;
+    refreshLessonPage();
+    let consoleLogs = [];
+    //Redefine console.log function
+    console.log = function (arg) {
+        consoleLogs.push(arg);
+    }
+    let runner = document.getElementById("run");
+    runner.addEventListener("click", () => {
+        evalAndReturn(document.getElementById("code").value);
+    });
+    document.getElementById("output").insertBefore(document.createTextNode("Output from console.log() calls appear here, the most recent at the bottom\n"), output.childNodes[0]);
+    function evalAndReturn(code) {
+        let output = document.getElementById("output");
+        while (output.firstChild) {
+            output.removeChild(output.firstChild);
+        }
+        document.getElementById("output").insertBefore(document.createTextNode("Output from console.log() calls appear here, the most recent at the bottom\n"), output.childNodes[0]);
+        let newItem = document.createTextNode(String(eval(code)) + "\n");
+        for (let i = 0; i < consoleLogs.length; i++) {
+            output.appendChild(document.createTextNode(consoleLogs[i] + "\n"));
+        }
+        checkWithAnswer(consoleLogs, code);
+        consoleLogs = [];
+    }
+    const desiredOutputs =
+        ["Hello, World!",
+            7];
+    const requiredKeywords =
+        [
+            ["console.log(", ";"],
+            ["x", "y", "=", "var", "-", ";"]
+        ];
+    function checkWithAnswer(codeOutput, rawCode) {
+        output.appendChild(document.createTextNode(""));
+        if (codeOutput == desiredOutputs[lessonNumber]) {
+            //We have the desired output. Now, lets see if we have all of our desired keywords in the code.
+            let allKeyWords = true;
+            for (let i = 0; i < requiredKeywords[lessonNumber].length; i++) {
+                if (rawCode.indexOf(requiredKeywords[lessonNumber][i]) == -1) {
+                    //we are missing the keyword
+                    allKeyWords = false;
+                    output.appendChild(document.createTextNode("Does not contain " + requiredKeywords[lessonNumber][i] + " \n"));
+                } else {
+                }
+            }
+            if (allKeyWords == true) {
+                lessonNumber++;
+                refreshLessonPage();
+            } else {
+                output.appendChild(document.createTextNode(`LESSON MESSAGE: The console output is correct, but you have not coded it properly.\nPlease edit your code, making sure that you have followed all instructions, and try\nagain. Taking "shortcuts" are not allowed for passing the lesson. \n`));
+            }
+        } else {
+            output.appendChild(document.createTextNode("LESSON MESSAGE: The console output is not correct.\nPlease edit your code and try again. \n"));
+        }
+    }
+</script>
+
+</html>
