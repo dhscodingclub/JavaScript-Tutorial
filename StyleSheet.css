@@ -50,10 +50,24 @@ h2 {
     border: none;
     font-size: 40px;
 }
+
+h3 {
+    font-family: 'Consolas';
+    text-decoration: none;
+    border: none;
+    font-size: 30px;
+}
 .center-text {
     text-align: center;
 }
-
+.fade
+{
+        opacity:0.5;
+}
+.fade:hover
+{
+        opacity:1;
+}
 button {
     background-color: #bbb;
     padding: .2em;
