@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- this is the code that will allow icon to be visible in the title bar of the brower -->
+<link rel="icon" type="image/ico" href="WebsiteLogo2.png" />
+<!-- you can also say this:  <link rel="icon" type="image/png" href="location/image.png" /> -->
+<h1>JavaScript Code Sandbox</h1>
+<textarea id="code">console.log("hi");</textarea>
+<button id="run">Run</button>
+<h2>Output</h2>
+<pre id="output"></pre>
+<style>
+    div.field {
+        font-family: 'Consolas';
+        font-size: 20px;
+        color: black;
+        width: 1000px;
+        height: 1000px;
+        border: 3px solid #cccccc;
+        background-color: white;
+        padding: 10px;
+        resize: none;
+    }
+
+    pre {
+        background-color: white;
+        width: 800px;
+    }
+
+    textarea {
+        resize: none;
+        width: 700px;
+        height: 400px;
+        color: black;
+        background-color: white;
+    }
+
+    ::selection {
+        background: #eeb005da;
+        /* WebKit/Blink Browsers */
+    }
+
+    ::-moz-selection {
+        background: #eeb005da;
+        /* Gecko Browsers */
+    }
+
+    body {
+        background-color: #E5E4E2;
+    }
+
+    h1 {
+        font-family: 'Consolas';
+        text-decoration: none;
+        border: none;
+        font-size: 30px;
+    }
+
+    h2 {
+        font-family: 'Consolas';
+        text-decoration: none;
+        border: none;
+        font-size: 20px;
+    }
+
+    button {
+        background-color: #bbb;
+        padding: .2em;
+        margin-left: 1em;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 10px;
+        color: #fff;
+        font-family: 'Consolas';
+        /*Oswald is a great font*/
+        text-decoration: none;
+        border: none;
+        font-size: 20px;
+    }
+
+    button:hover {
+        background-color: rgb(172, 122, 15);
+    }
+</style>
+<script>
+    let runner = document.getElementById("run");
+    runner.addEventListener("click", () => {
+        //console.log("running " + document.getElementById("code").value);
+        evalAndReturn(document.getElementById("code").value);
+    });
+    document.getElementById("output").insertBefore(document.createTextNode("Output from return() calls appear here, the most recent at the top\n"), output.childNodes[0]);
+    function evalAndReturn(code) {
+        let newItem = document.createTextNode(String(eval(code)) + "\n");
+        let output = document.getElementById("output");
+        if (eval(code) != undefined) {
+            output.insertBefore(newItem, output.childNodes[0]);
+        } else {
+            document.getElementById("output").appendChild(document.createTextNode("No results. You can view Console.logs in the console, but you need a return() value. \n"));
+        }
+        if(output.childNodes[8] != undefined){
+        output.removeChild(output.childNodes[8]);
+        }
+
+        //return x;
+    }
+    //console.log()
+    //evalAndReturn(document.getElementById("code").textContent);
+	// → 2
+</script>
+
+</html>
