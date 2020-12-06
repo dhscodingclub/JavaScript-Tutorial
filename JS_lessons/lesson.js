@@ -55,15 +55,16 @@ function refreshLessonPage() {
         <p><challenge>Write a program that calculates a letter grade based on a score you received. Have a variable called pointsReceived that stores how many points you have scored on the assignment, and have a variable called totalPossiblePoints that stores the highest score that someone could score on the test. Have it be that you scored 59 points out of 73 possible. Remember that an A is anything above 89.9%, a B is anything above 79.9%, a C is anything above 69.9%, a D is anything above 59.9%, and an F is anything lower than a D. Make sure that you test for all cases when testing for your grade, and <strong>have your grade exressed as a decimal, such as 0.50 = 50%</strong>.</challenge></p>`;
     } else if (lessonNumber == 4) {
         //&emsp; is a tab
-        lessonSection.innerHTML = `lesson 4`;
+        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 4: while loops</h2>
+        <p>Sometimes, we want some of our lines of code to keep on repeating excecution so long a certain statement is true.</p>`;
     } else if (lessonNumber == 5) {
         //&emsp; is a tab
-        lessonSection.innerHTML = `lesson 5`;
+        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 5: for loops</h2>`;
     } else if (lessonNumber == 6) {
         //&emsp; is a tab
-        lessonSection.innerHTML = `lesson 6`;
+        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 6: Functions</h2>`;
     } else if (lessonNumber == 7) {
         //&emsp; is a tab
-        lessonSection.innerHTML = `lesson 7`;
+        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 7: Data Type of Strings</h2>`;
     }
 }
