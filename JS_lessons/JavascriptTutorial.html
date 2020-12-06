@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- this is the code that will allow icon to be visible in the title bar of the brower -->
 <link rel="icon" type="image/ico" href="../Logo.png" />
+<title>DHS JS Tutorial</title>
 <!-- you can also say this:  <link rel="icon" type="image/png" href="location/image.png" /> -->
 <h1 class="center-text">JavaScript Tutorial</h1>
 <div id="lesson"></div>
@@ -41,8 +42,10 @@
         consoleLogs = [];
     }
     const desiredOutputs =
-        ["Hello, World!",
-            7];
+        [
+            ["Hello, World!"],
+            [7]
+        ];
     const requiredKeywords =
         [
             ["console.log(", ";"],
@@ -50,7 +53,13 @@
         ];
     function checkWithAnswer(codeOutput, rawCode) {
         output.appendChild(document.createTextNode(""));
-        if (codeOutput == desiredOutputs[lessonNumber]) {
+        let allOutputsGood = true;
+        for (let i = 0; i < desiredOutputs.length; i++){
+            if (desiredOutputs[lessonNumber][i] != codeOutput[i]){
+                allOutputsGood = false;
+            }
+        }
+        if (allOutputsGood == true) {
             //We have the desired output. Now, lets see if we have all of our desired keywords in the code.
             let allKeyWords = true;
             for (let i = 0; i < requiredKeywords[lessonNumber].length; i++) {
