@@ -6,14 +6,18 @@
 <title>DHS JS Tutorial</title>
 <!-- you can also say this:  <link rel="icon" type="image/png" href="location/image.png" /> -->
 <h1 class="center-text">JavaScript Tutorial</h1>
+<div id="lessonKey"></div>
+<input type="text" id="keyEnter" value="" placeholder="Lesson Key" maxlength="100" />
+<button id="jump" style="display: inline;">Jump</button>
 <div id="lesson"></div>
-<textarea id="code"></textarea>
+<textarea id="code" spellcheck="false"></textarea>
 <button id="run">Run</button>
 <h2>Output Console</h2>
 <pre id="output"></pre>
 <link rel="stylesheet" href="../StyleSheet.css">
 <!--Import the lessons function from lessons.js file-->
-<script src="./lessons.js"></script>
+<script src="./lesson.js"></script>
+<script src="./Constants.js"></script>
 <script>
     //start with lesson 0
     var lessonNumber = 3;
@@ -26,6 +30,19 @@
     let runner = document.getElementById("run");
     runner.addEventListener("click", () => {
         evalAndReturn(document.getElementById("code").value);
+    });
+    let jumper = document.getElementById("jump");
+    function checkKey(){
+        for(let i = 0; i < lessonSkipCodes.length; i++){
+            if (lessonSkipCodes[i] == document.getElementById("keyEnter").value){
+                //The key matches the lesson, so jump to that lesson
+                lessonNumber = i;
+                refreshLessonPage();
+            }
+        }
+    }
+    jumper.addEventListener("click", () => {
+        checkKey();
     });
     document.getElementById("output").insertBefore(document.createTextNode("Output from console.log() calls appear here, the most recent at the bottom\n"), output.childNodes[0]);
     function evalAndReturn(code) {
@@ -41,25 +58,11 @@
         checkWithAnswer(consoleLogs, code);
         consoleLogs = [];
     }
-    const desiredOutputs =
-        [
-            ["Hello, World!"],
-            [7],
-            [(9/5 * 17 + 32)],
-            ["B"],
-        ];
-    const requiredKeywords =
-        [
-            ["console.log(", ";"],
-            ["x", "y", "15", "8", "=", "var", "-", ";"],
-            ["var", "C", "17", "*", "+", "32"],
-            ["var", "/", "pointsReceived", "59", "totalPossiblePoints", "73", "if", "else", ";", ".899", ".799", ".699", ".599", "A", "B", "C", "D", "F", "{", "}"],
-        ];
     function checkWithAnswer(codeOutput, rawCode) {
         output.appendChild(document.createTextNode(""));
         let allOutputsGood = true;
-        for (let i = 0; i < desiredOutputs.length; i++){
-            if (desiredOutputs[lessonNumber][i] != codeOutput[i]){
+        for (let i = 0; i < desiredOutputs.length; i++) {
+            if (desiredOutputs[lessonNumber][i] != codeOutput[i]) {
                 allOutputsGood = false;
             }
         }

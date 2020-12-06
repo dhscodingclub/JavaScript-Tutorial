@@ -1,4 +1,7 @@
 function refreshLessonPage() {
+    let key = document.getElementById("lessonKey");
+    key.innerHTML = "<h2>Lesson Key: " + lessonSkipCodes[lessonNumber] + `</h2>
+    <h3>If you are a returning student, type in the key of your last lesson to enter.</h3>`;
     let lessonSection = document.getElementById("lesson");
     if (lessonNumber == 0) {
         lessonSection.innerHTML =
