@@ -2,7 +2,7 @@ function refreshLessonPage() {
     let lessonSection = document.getElementById("lesson");
     if (lessonNumber == 0) {
         lessonSection.innerHTML = 
-        `<h2><img src="../logo.png" height=30>Lesson 0: Hello, World!</h2>
+        `<h2><img src="../Logo.png" height=30>Lesson 0: Hello, World!</h2>
         <p>Whenever you are learining a new programming language, people traditionally make the computer say "Hello World" to ensure that they are able to run a program successfully without complicated code. In JavaScript, a computer can "print" statements to what we call the console using the fsollowing statement:</p>
         <div class="code">console.log("text");</div>
         <p>console.log() prints out whatever exists between the parenthesis. If you want to print out text, have quotation marks ("") around the text you want to print. For example:1
@@ -13,7 +13,7 @@ function refreshLessonPage() {
         <p><challenge>Challenge: can you code a program that prints "Hello, World!" to the console?</challenge></p>`;
     } else if (lessonNumber == 1){
         lessonSection.innerHTML = 
-        `<h2><img src="../logo.png" height=30>Lesson 1: Variables</h2>
+        `<h2><img src="../Logo.png" height=30>Lesson 1: Variables</h2>
         <p>A variable is a container for storing a data value. Variables are declared with the var keyword, and you can set their data value equal to something by using the equals (=) sign.</p>
         <div class="code">var x = 5;</div>
         <p>The line of code above does 2 things. Firstly, it initializes a new variable called x with the "var" keyword. Secondly, it sets the new variable of x to the value of 5.</p>
@@ -29,6 +29,6 @@ function refreshLessonPage() {
         <p><challenge>Write some code that has variables x and y. Have x be set equal to 15, and have y be set equal to 8. Then print out to the console what the difference between x and y is (which is x - y).</challenge></p>`;
     } else if (lessonNumber == 2){
         lessonSection.innerHTML = 
-        `<h2><img src="../logo.png" height=30>Lesson 2: Data Types</h2>`;
+        `<h2><img src="../Logo.png" height=30>Lesson 2: Data Types</h2>`;
     }
 }
