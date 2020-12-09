@@ -66,25 +66,12 @@ function refreshLessonPage() {
     } else if (lessonNumber == 7) {
         //&emsp; is a tab
         lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 7: Data Type of Strings</h2>`;
-    } else if (lessonNumber == 4) {
-        //&emsp; is a tab
-        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 4: while loops</h2>
-        <p>Sometimes, we want some of our lines of code to keep on repeating excecution so long a certain statement is true.</p>`;
-    } else if (lessonNumber == 5) {
-        //&emsp; is a tab
-        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 5: for loops</h2>`;
-    } else if (lessonNumber == 6) {
-        //&emsp; is a tab
-        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 6: Data Type of Strings</h2>`;
-    } else if (lessonNumber == 7) {
-        //&emsp; is a tab
-        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 7: Booleans</h2>`;
     } else if (lessonNumber == 8) {
         //&emsp; is a tab
-        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 8: Functions</h2>`;
+        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 8: Arrays</h2>`;
     } else if (lessonNumber == 9) {
         //&emsp; is a tab
-        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 9: Array</h2>`;
+        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 9: Objects</h2>`;
     } else if (lessonNumber == 10) {
         //&emsp; is a tab
         lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 10: Classes</h2>`;
