@@ -63,6 +63,15 @@ function refreshLessonPage() {
     } else if (lessonNumber == 6) {
         //&emsp; is a tab
         lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 6: Functions</h2>`;
+            `<h2><img src="../Logo.png" height=30>Lesson 0: String Data Type</h2>
+        <p>So far we have learned about two different data types: numbers and strings. Data types are different types of values that are stored in variables. Now we will learn about strings, which are sets of zero or more characters written inside quotes. Let's create some strings:</p>
+        <div class="code">var name = "Adam Clark";</div>
+        <div class="code">var age = '35';</div>
+        <div class="code">console.log(name + ' is ' + age);</div>
+        <div class="code">--> Adam Clark is 35</div>
+        <p>Notice how we can use single or double quotes to create a string. We cannot change strings, but we can add strings to other strings, like in the example above:</p>
+        <p><challenge>Challenge: Code a program that creates two string variables: name and city, and set them equal to your name and the city you live in. Then print a sentence to the console that says what city you live in.</challenge></p>;
+        <p><challenge>Remember to include " lives in " in the middle of your console.log() statement</challenge></p>`;
     } else if (lessonNumber == 7) {
         //&emsp; is a tab
         lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 7: Data Type of Strings</h2>`;
