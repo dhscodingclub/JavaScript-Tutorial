@@ -73,7 +73,7 @@ function refreshLessonPage() {
         <div class="code">console.log(name + ' is ' + age);</div>
         <div class="code">--> Adam Clark is 35</div>
         <p>Notice how we can use single or double quotes to create a string. We cannot change strings, but we can add strings to other strings, like in the example above:</p>
-        <p><challenge>Challenge: Code a program that creates two string variables: name and city, and set them equal to Batman and the city he lives in: Gotham City. Then print a sentence to the console that states where Batman lives.</challenge></p>;
+        <p><challenge>Challenge: Code a program that creates two string variables: name and city, and set them equal to Batman and the city he lives in: Gotham City. Then print a sentence to the console that states where Batman lives.</challenge></p>
         <p><challenge>You will need to include " lives in " in the middle of your console.log() statement</challenge></p>`;
     } else if (lessonNumber == 8) {
         //&emsp; is a tab
