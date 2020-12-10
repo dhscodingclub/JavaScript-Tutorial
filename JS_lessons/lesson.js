@@ -65,8 +65,8 @@ function refreshLessonPage() {
         lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 6: Functions</h2>`;
     } else if (lessonNumber == 7) {
         //&emsp; is a tab
-        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 7: Data Type of Strings</h2>`;
-            `<h2><img src="../Logo.png" height=30>Lesson 0: String Data Type</h2>
+        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 7: Data Type of Strings</h2>;
+            <h2><img src="../Logo.png" height=30>Lesson 0: String Data Type</h2>
         <p>So far we have learned about two different data types: numbers and strings. Data types are different types of values that are stored in variables. Now we will learn about strings, which are sets of zero or more characters written inside quotes. Let's create some strings:</p>
         <div class="code">var name = "Adam Clark";</div>
         <div class="code">var age = '35';</div>
