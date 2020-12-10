@@ -19,6 +19,7 @@ const desiredOutputs =
         ["B"],
         [],
         [],
+        [],
         ["Batman lives in Gotham City"]
     ];
 const requiredKeywords =
@@ -27,6 +28,7 @@ const requiredKeywords =
         ["x", "y", "15", "8", "=", "var", "-", ";"],
         ["var", "C", "17", "*", "+", "32"],
         ["var", "/", "pointsReceived", "59", "totalPossiblePoints", "73", "if", "else", ";", ".899", ".799", ".699", ".599", "A", "B", "C", "D", "F", "{", "}"],
+        [],
         [],
         [],
         ["var", "name", "city", ";", " lives in ", "console.log("]
