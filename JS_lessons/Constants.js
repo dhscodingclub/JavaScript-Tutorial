@@ -31,5 +31,5 @@ const requiredKeywords =
         [],
         [],
         [],
-        ["var", "name", "city", ";", " lives in ", "console.log("]
+        ["var", "name", "city", ";", " lives in ", "console.log(name + "]
     ];
