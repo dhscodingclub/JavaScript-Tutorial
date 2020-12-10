@@ -18,7 +18,8 @@ const desiredOutputs =
         [(9 / 5 * 17 + 32)],
         ["B"],
         [],
-        [name + ' lives in ' + city]
+        [],
+        ["Batman lives in Gotham City"]
     ];
 const requiredKeywords =
     [
