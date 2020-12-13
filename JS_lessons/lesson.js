@@ -56,7 +56,21 @@ function refreshLessonPage() {
     } else if (lessonNumber == 4) {
         //&emsp; is a tab
         lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 4: while loops</h2>
-        <p>Sometimes, we want some of our lines of code to keep on repeating excecution so long a certain statement is true.</p>`;
+        <p>Sometimes, we want some of our lines of code to keep on repeating excecution so long a certain statement is true.</p>
+        <p>For example, if we want to print x as long as it is greater than 6, we can write.</p>
+        <div class="code">var x = 1;</div>
+        <div class="code">while(x < 6){</div>
+        <div class="code">&emsp;console.log(x); </div>   
+        <div class="code">&emsp;x = x + 1; </div>   
+        <div class="code">}</div>
+        <p>This will output 1, 2, 3, 4, 5. You can check with the bottom console.</p>
+        <p>The condition that's being checked for is if x is less than 6. These conditions are the same as the ones used in the if statements. While this is true, the lines inside the loop will run. After each of the lines in the loop have been run, then the condition will be checked again.</p>
+        <p>One thing to avoid is what is called an infinite loop, where the condition will always be true. This will cause the loop to never end, and can cause other issues as well. The easiest way to create one would be</p>
+        <div class="code">while(true){</div>
+        <div class="code">&emsp; //Some Code</div>
+        <div class="code">}</div>
+        <p>Since the condition is always true, this code will never stop unless you manually end it somehow</p>
+        <p><challenge>Challenge: Using a while loopo, repeatedly print the value of the variable x, starting at 10 and decreasing it by 0.5 each time. Do while x isn't negative.</challenge></p>`;
     } else if (lessonNumber == 5) {
         //&emsp; is a tab
         lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 5: for loops</h2>`;
