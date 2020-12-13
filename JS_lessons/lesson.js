@@ -74,6 +74,14 @@ function refreshLessonPage() {
         lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 9: Objects</h2>`;
     } else if (lessonNumber == 10) {
         //&emsp; is a tab
-        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 10: Classes</h2>`;
+        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 10: Classes</h2>
+        <p>Classes are templates used to create objects in Javascript, which include variables and methods that are passed on to every object created by a class. You can initialize a class by using the class keyword:</p>
+        <div class="code">class Car {</div>
+        <div class="code">&emsp; constructor(name, year) {</div>
+        <div class="code">&emsp; &emsp; this.name = name;</div>
+        <div class="code">&emsp; &emsp; this.year = year;</div>
+        <div class="code">&emsp; }</div>F
+        <div class="code">};</div>
+        `;
     }
 }

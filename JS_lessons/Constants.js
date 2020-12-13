@@ -1,15 +1,18 @@
 const lessonSkipCodes =
     [
-        "a3vi031",
+        "a3vi031", //0
         "91xk1ap",
-        "krzdsxv",
+        "krzdsxv", //2
         "ky7d5g4",
-        "tfoys1h",
+        "tfoys1h", //4
         "n7qmv4x",
-        "07b2jqu",
+        "07b2jqu", //6
         "ishqk9k",
-        "t86zliq",
-        "3icw2hsF"
+        "t86zliq", //8
+        "3icw2hsF",
+        "kf53ia8r", //10
+        "3c05d1le",
+        "78ka1pow" //12
     ];
 const desiredOutputs =
     [
