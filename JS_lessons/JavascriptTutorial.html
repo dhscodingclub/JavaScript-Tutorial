@@ -32,15 +32,30 @@
         evalAndReturn(document.getElementById("code").value);
     });
     let jumper = document.getElementById("jump");
-    function checkKey(){
-        for(let i = 0; i < lessonSkipCodes.length; i++){
-            if (lessonSkipCodes[i] == document.getElementById("keyEnter").value){
+    function checkKey() {
+        for (let i = 0; i < lessonSkipCodes.length; i++) {
+            if (lessonSkipCodes[i] == document.getElementById("keyEnter").value) {
                 //The key matches the lesson, so jump to that lesson
                 lessonNumber = i;
                 refreshLessonPage();
             }
         }
     }
+    document.getElementById('code').addEventListener('keydown', function (e) {
+        if (e.key == 'Tab') {
+            e.preventDefault();
+            var start = this.selectionStart;
+            var end = this.selectionEnd;
+
+            // set textarea value to: text before caret + tab + text after caret
+            this.value = this.value.substring(0, start) +
+                "\t" + this.value.substring(end);
+
+            // put caret at right position again
+            this.selectionStart =
+                this.selectionEnd = start + 1;
+        }
+    });
     jumper.addEventListener("click", () => {
         checkKey();
     });
