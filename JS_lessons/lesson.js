@@ -100,7 +100,12 @@ function refreshLessonPage() {
         <div class="code">console.log(name + ' is ' + age);</div>
         <div class="code">--> Adam Clark is 35</div>
         <p>Notice how we can use single or double quotes to create a string. We cannot change strings, but we can add strings to other strings, like in the example above:</p>
-        <p><challenge>Code a program that creates two string variables: name and city, and set them equal to Batman and the city he lives in: Gotham City. Then print a sentence to the console that states where Batman lives. You will need to include " lives in " in the middle of your console.log() statement.</challenge></p>`;
+        <p>Strings have different methods, which let you do different things with strings. Methods always follow the end of a string and begin with a period. Here is a method that gives us the length of a string:
+        <div class="code">var string = 'supercalifragilisticexpialidocious';</div>
+        <div class="code">console.log(string.length);</div>
+        <div class="code">Output: 34</div>
+        <p> There are various other methods such as .indexOf, which gives us the index of a character within a string, and .split, which splits a string.</p>
+        <p><challenge>Challenge 1: Code a program that creates two string variables: name and city, and set them equal to Batman and the city he lives in: Gotham City. Then print a sentence to the console that states where Batman lives. You will need to include " lives in " in the middle of your console.log() statement.</challenge></p>`;
     } else if (lessonNumber == 8) {
         //&emsp; is a tab
         lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 8: Arrays</h2>`;
