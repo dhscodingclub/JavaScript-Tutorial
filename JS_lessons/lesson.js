@@ -87,7 +87,7 @@ function refreshLessonPage() {
         <div class="code">&emsp; &emsp; &emsp; letter_count = letter_count + 1;</div>
         <div class="code">&emsp; &emsp; }</div>
         <div class="code">&emsp; }</div>
-        <div class="code">&emsp;return letter_count;</div>
+        <div class="code">&emsp; return letter_count;</div>
         <div class="code">}</div>
         <div class="code">console.log(letterCounter("banana", "a"));</div>`;
     } else if (lessonNumber == 7) {
