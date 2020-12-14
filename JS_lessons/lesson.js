@@ -83,11 +83,11 @@ function refreshLessonPage() {
         <div class="code">function letterCounter(word, letter) {</div>
         <div class="code">&emsp;var letter_count = 0;</div>
         <div class="code">&emsp;for (i = 0; i < word.length; i++) {</div>
-        <div class="code">&emsp;if (word[i] == letter) {</div>
-        <div class="code">&emsp;letter_count = letter_count + 1;</div>
+        <div class="code">&emsp;&emsp;if (word[i] == letter) {</div>
+        <div class="code">&emsp;&emsp;&emsp;letter_count = letter_count + 1;</div>
         <div class="code">&emsp;&emsp;}</div>
-        <div class="code">&emsp;&emsp;}</div>
-        <div class="code">&emsp;&emsp;return letter_count;</div>
+        <div class="code">&emsp;}</div>
+        <div class="code">&emsp;return letter_count;</div>
         <div class="code">}</div>
         <div class="code">console.log(letterCounter("banana", "a"));</div>`;
     } else if (lessonNumber == 7) {
