@@ -81,13 +81,13 @@ function refreshLessonPage() {
             `<h2><img src="../Logo.png" height=30>Lesson 6: Functions</h2>
         <p>Functions in JavaScript are blocks of code that are meant to perform some sort of task. This could be adding two numbers, reversing a string, or anything else. Functions always end with a return statement, which is the output or final product of the task. This is how a function would look like:<p>
         <div class="code">function letterCounter(word, letter) {</div>
-        <div class="code">  var letter_count = 0;</div>
-        <div class="code">  for (i = 0; i < word.length; i++) {</div>
-        <div class="code">      if (word[i] == letter) {</div>
-        <div class="code">          letter_count = letter_count + 1;</div>
-        <div class="code">          }</div>
-        <div class="code">      }</div>
-        <div class="code">      return letter_count;</div>
+        <div class="code">&emsp;var letter_count = 0;</div>
+        <div class="code">&emsp;for (i = 0; i < word.length; i++) {</div>
+        <div class="code">&emsp;if (word[i] == letter) {</div>
+        <div class="code">&emsp;letter_count = letter_count + 1;</div>
+        <div class="code">&emsp;}</div>
+        <div class="code">&emsp;}</div>
+        <div class="code">&emsp;return letter_count;</div>
         <div class="code">}</div>
         <div class="code">console.log(letterCounter("banana", "a"));</div>`;
     } else if (lessonNumber == 7) {
