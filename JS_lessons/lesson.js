@@ -74,7 +74,29 @@ function refreshLessonPage() {
     } else if (lessonNumber == 5) {
         //&emsp; is a tab
         lessonSection.innerHTML = 
-            `<h2><img src="../Logo.png" height=30>Lesson 5: for loops</h2>`;
+            `<h2><img src="../Logo.png" height=30>Lesson 5: for loops</h2>
+            <p>For loops are similar to a while loop, and can be written using a while loop. But since they're used so often, they often have their own specific thing. Here is how the for loop works.</p>
+            <div class="code">var x = 0;</div>
+            <div class="code">while x < 8 {</div>
+            <div class="code">&emsp; //do something</div>
+            <div class="code">&emsp; x = x + 1;</div>
+            <div class="code">}</div>
+            <p>This is essentially how a for loop will operate. A variable will be chosen as the counter variable, it'll be changed (usually by adding one) until it reaches the end value. The following code is essentially the same as earlier.</p>
+            <div class="code">for(var x = 0; x < 8; x=x+1) {</div>
+            <div class="code">&emsp; //do something</div>
+            <div class="code">}</div>
+            <p>The first statement is the define the variable, and what value it starts at. Statement 2 is to evaluate if it is true. If it is true, then the code inside the loop is run. After all the code inside the loop is run, then the last statement is run and the variable is changed.</p>
+            <p>This specific loop, just like the first loop, will run whatever is inside the loop 8 times.</p>
+            <p>Too simplify the code even further, there are simplifications you can do with +=, -=, ++, and --. These next lines of code are essentially the same.</p>
+            <div class="code">x = x + 1;</div>
+            <div class="code">x += 1;</div>
+            <div class="code">x++;</div>
+            <p>And the same with -= and --. So we can rewrite the for loop as</p>
+            <div class="code">for(var x = 0; x < 8; x++) {</div>
+            <div class="code">&emsp; //do something</div>
+            <div class="code">}</div>
+            <p><challenge>Challenge: Using a for loop, and -=, repeatedly print the value of the variable x, starting at 10 and decreasing it by 0.5 each time. Do while x isn't negative.</challenge></p>`;
+
     } else if (lessonNumber == 6) {
         //&emsp; is a tab
         lessonSection.innerHTML = 
