@@ -73,10 +73,23 @@ function refreshLessonPage() {
         <p><challenge>Challenge: Using a while loopo, repeatedly print the value of the variable x, starting at 10 and decreasing it by 0.5 each time. Do while x isn't negative.</challenge></p>`;
     } else if (lessonNumber == 5) {
         //&emsp; is a tab
-        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 5: for loops</h2>`;
+        lessonSection.innerHTML = 
+            `<h2><img src="../Logo.png" height=30>Lesson 5: for loops</h2>`;
     } else if (lessonNumber == 6) {
         //&emsp; is a tab
-        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 6: Functions</h2>`;
+        lessonSection.innerHTML = 
+            `<h2><img src="../Logo.png" height=30>Lesson 6: Functions</h2>
+        <p>Functions in JavaScript are blocks of code that are meant to perform some sort of task. This could be adding two numbers, reversing a string, or anything else. Functions always end with a return statement, which is the output or final product of the task. This is how a function would look like:<p>
+        <div class="code">function letterCounter(word, letter) {</div>
+        <div class="code">&emsp; var letter_count = 0;</div>
+        <div class="code">&emsp; for (i = 0; i < word.length; i++) {</div>
+        <div class="code">&emsp; &emsp; if (word[i] == letter) {</div>
+        <div class="code">&emsp; &emsp; &emsp; letter_count = letter_count + 1;</div>
+        <div class="code">&emsp; &emsp; }</div>
+        <div class="code">&emsp; }</div>
+        <div class="code">&emsp; return letter_count;</div>
+        <div class="code">}</div>
+        <div class="code">console.log(letterCounter("banana", "a"));</div>`;
     } else if (lessonNumber == 7) {
         //&emsp; is a tab
         lessonSection.innerHTML = 
@@ -87,7 +100,12 @@ function refreshLessonPage() {
         <div class="code">console.log(name + ' is ' + age);</div>
         <div class="code">--> Adam Clark is 35</div>
         <p>Notice how we can use single or double quotes to create a string. We cannot change strings, but we can add strings to other strings, like in the example above:</p>
-        <p><challenge>Code a program that creates two string variables: name and city, and set them equal to Batman and the city he lives in: Gotham City. Then print a sentence to the console that states where Batman lives. You will need to include " lives in " in the middle of your console.log() statement.</challenge></p>`;
+        <p>Strings have different methods, which let you do different things with strings. Methods always follow the end of a string and begin with a period. Here is a method that gives us the length of a string:
+        <div class="code">var string = 'supercalifragilisticexpialidocious';</div>
+        <div class="code">console.log(string.length);</div>
+        <div class="code">Output: 34</div>
+        <p> There are various other methods such as .indexOf, which gives us the index of a character within a string, and .split, which splits a string.</p>
+        <p><challenge>Challenge 1: Code a program that creates two string variables: name and city, and set them equal to Batman and the city he lives in: Gotham City. Then print a sentence to the console that states where Batman lives. You will need to include " lives in " in the middle of your console.log() statement.</challenge></p>`;
     } else if (lessonNumber == 8) {
         //&emsp; is a tab
         lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 8: Arrays</h2>`;
