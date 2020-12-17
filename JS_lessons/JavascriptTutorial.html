@@ -20,7 +20,7 @@
 <script src="./Constants.js"></script>
 <script>
     //start with lesson 0
-    var lessonNumber = 0;
+    var lessonNumber = 10;
     refreshLessonPage();
     let consoleLogs = [];
     //Redefine console.log function
@@ -93,8 +93,11 @@
                 }
             }
             if (allKeyWords == true) {
+                //We passed!
                 lessonNumber++;
                 refreshLessonPage();
+                //Automatically go to the top of the page
+                window.location="#";
             } else {
                 output.appendChild(document.createTextNode(`LESSON MESSAGE: The console output is correct, but you have not coded it properly.\nPlease edit your code, making sure that you have followed all instructions, and try\nagain. Taking "shortcuts" are not allowed for passing the lesson. \n`));
             }

@@ -102,7 +102,7 @@ function refreshLessonPage() {
         <div class="code">&emsp; constructor(name, year) {</div>
         <div class="code">&emsp; &emsp; this.name = name;</div>
         <div class="code">&emsp; &emsp; this.year = year;</div>
-        <div class="code">&emsp; }</div>F
+        <div class="code">&emsp; }</div>
         <div class="code">};</div>
         `;
     }
