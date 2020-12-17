@@ -5,7 +5,9 @@
 <link rel="icon" type="image/ico" href="../Logo.png" />
 <title>DHS JS Tutorial</title>
 <!-- you can also say this:  <link rel="icon" type="image/png" href="location/image.png" /> -->
-<h1 class="center-text"><span style="background-color: rgb(255, 251, 0); padding-left: 5px; padding-right: 5px;">JavaScript Tutorial</span></h1>
+<h1 class="center-text"><span
+        style="background-color: rgb(255, 251, 0); padding-left: 5px; padding-right: 5px;">JavaScript Tutorial</span>
+</h1>
 <div id="lessonKey"></div>
 <input type="text" id="keyEnter" value="" placeholder="Lesson Key" maxlength="100" />
 <button id="jump" style="display: inline;">Jump</button>
@@ -16,8 +18,9 @@
     </div>
     <div class="column">
         <div><button id="run" style="width: 90%;">Run Code</button></div>
-        <h2>Code Output Console</h2>
-        <pre id="output"></pre>
+        <h2 style="padding-bottom: 0px;">Code Output Console</h2>
+        <div id="grade"><p>Output from your code will show up in this console below.</p></div>
+        <textarea id="ConsoleOutput" style="width: 90%; height: 200px;" disabled=true></textarea>
     </div>
 </div>
 <link rel="stylesheet" href="../StyleSheet.css">
@@ -29,13 +32,15 @@
     var lessonNumber = 0;
     refreshLessonPage();
     let consoleLogs = [];
+    var displayConsole = document.getElementById("ConsoleOutput");
+    var inputCode = document.getElementById("code");
     //Redefine console.log function
     console.log = function (arg) {
         consoleLogs.push(arg);
     }
     let runner = document.getElementById("run");
     runner.addEventListener("click", () => {
-        let codeValue = document.getElementById("code").value;
+        let codeValue = inputCode.value;
         evalAndReturn(codeValue);
         //console.log(codeValue); // <- This line is only for debugging; it breaks the code.
     });
@@ -67,22 +72,28 @@
     jumper.addEventListener("click", () => {
         checkKey();
     });
-    document.getElementById("output").insertBefore(document.createTextNode("Output from console.log() calls appear here, the most recent at the bottom\n"), output.childNodes[0]);
     function evalAndReturn(code) {
-        let output = document.getElementById("output");
-        while (output.firstChild) {
-            output.removeChild(output.firstChild);
-        }
-        document.getElementById("output").insertBefore(document.createTextNode("Output from console.log() calls appear here, the most recent at the bottom\n"), output.childNodes[0]);
-        let newItem = document.createTextNode(String(eval(code)) + "\n");
+        displayConsole.value = "";
+        let newItem = eval(code);
         for (let i = 0; i < consoleLogs.length; i++) {
-            output.appendChild(document.createTextNode(consoleLogs[i] + "\n"));
+            displayConsole.value += consoleLogs[i] + "\n";
         }
         checkWithAnswer(consoleLogs, code);
         consoleLogs = [];
     }
+    function nextLesson() {
+        let Grade = document.getElementById("grade");
+        Grade.innerHTML = `<p>Output from your code will show up in this console below.</p>`;
+        lessonNumber++;
+        refreshLessonPage();
+        //Automatically go to the top of the page
+        window.location = "#";
+        //Automatically clear the output console and input textarea
+        displayConsole.value = "";
+        inputCode.value = "";
+    }
     function checkWithAnswer(codeOutput, rawCode) {
-        output.appendChild(document.createTextNode(""));
+        let Grade = document.getElementById("grade");
         let allOutputsGood = true;
         for (let i = 0; i < desiredOutputs.length; i++) {
             if (desiredOutputs[lessonNumber][i] != codeOutput[i]) {
@@ -96,21 +107,20 @@
                 if (rawCode.indexOf(requiredKeywords[lessonNumber][i]) == -1) {
                     //we are missing the keyword
                     allKeyWords = false;
-                    output.appendChild(document.createTextNode("Does not contain " + requiredKeywords[lessonNumber][i] + " \n"));
+                    displayConsole.value += "\nLESSON FEEDBACK: \nmissing keyword " + requiredKeywords[lessonNumber][i];
                 } else {
                 }
             }
             if (allKeyWords == true) {
                 //We passed!
-                lessonNumber++;
-                refreshLessonPage();
-                //Automatically go to the top of the page
-                window.location = "#";
+                Grade.innerHTML = `<p>Congratulations, your code built successfully and had the corret output!<img src="../Checkmark.png" height=15><button onclick="nextLesson();">Next Lesson</button></p>`;
             } else {
-                output.appendChild(document.createTextNode(`LESSON MESSAGE: The console output is correct, but you have not coded it properly.\nPlease edit your code, making sure that you have followed all instructions, and try\nagain. Taking "shortcuts" are not allowed for passing the lesson. \n`));
+                Grade.innerHTML = `<p>The console output is correct, but you have not coded it properly. Please edit your code, making sure that you have followed all instructions, and try again. Taking "shortcuts" are not allowed for passing the lesson.</p>
+                <p style="color: red">Incorrect<img src="../Fail.png" height=15></p>`;
             }
         } else {
-            output.appendChild(document.createTextNode("LESSON MESSAGE: The console output is not correct.\nPlease edit your code and try again. \n"));
+            Grade.innerHTML = `<p>The console output is not correct.\nPlease edit your code and try again.</p> 
+            <p style="color: red">Incorrect<img src="../Fail.png" height=15></p>`;
         }
     }
 </script>

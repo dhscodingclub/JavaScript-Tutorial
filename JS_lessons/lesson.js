@@ -7,9 +7,9 @@ function refreshLessonPage() {
     if (lessonNumber == 0) {
         lessonSection.innerHTML =
             `<h2><img src="${logoLink}" height=30>Lesson 0: Hello, World!</h2>
-        <p>Whenever you are learining a new programming language, people traditionally make the computer say "Hello World" to ensure that they are able to run a program successfully without complicated code. In JavaScript, a computer can "print" statements to what we call the console using the fsollowing statement:</p>
+        <p>Whenever you are learning a new programming language, people traditionally make the computer say "Hello World" to ensure that they are able to run a program successfully without complicated code. In JavaScript, a computer can "print" statements to what we call the console using the following statement:</p>
         <div class="code">console.log("text");</div>
-        <p>console.log() prints out whatever exists between the parenthesis. If you want to print out text, have quotation marks ("") around the text you want to print. For example:1
+        <p>console.log() prints out whatever exists between the parenthesis. If you want to print out text, have quotation marks ("") around the text you want to print. For example:
         <div class="code">console.log("Strawberry Jam");</div>
         <div class="code">--> Strawberry Jam</div>
         <p>console.log("Strawberry Jam"); prints out "Strawberry Jam" to the console.</p>
@@ -71,10 +71,10 @@ function refreshLessonPage() {
         <div class="code">&emsp; //Some Code</div>
         <div class="code">}</div>
         <p>Since the condition is always true, this code will never stop unless you manually end it somehow</p>
-        <p><challenge>Challenge: Using a while loopo, repeatedly print the value of the variable x, starting at 10 and decreasing it by 0.5 each time. Do while x isn't negative.</challenge></p>`;
+        <p><challenge>Challenge: Using a while loop, repeatedly print the value of the variable x, starting at 10 and decreasing it by 0.5 each time. Do while x isn't negative.</challenge></p>`;
     } else if (lessonNumber == 5) {
         //&emsp; is a tab
-        lessonSection.innerHTML = 
+        lessonSection.innerHTML =
             `<h2><img src="${logoLink}" height=30>Lesson 5: for loops</h2>
             <p>For loops are similar to a while loop, and can be written using a while loop. But since they're used so often, they often have their own specific thing. Here is how the for loop works.</p>
             <div class="code">var x = 0;</div>
@@ -100,7 +100,7 @@ function refreshLessonPage() {
 
     } else if (lessonNumber == 6) {
         //&emsp; is a tab
-        lessonSection.innerHTML = 
+        lessonSection.innerHTML =
             `<h2><img src="${logoLink}" height=30>Lesson 6: Functions</h2>
         <p>Functions in JavaScript are blocks of code that are meant to perform some sort of task. This could be adding two numbers, reversing a string, or anything else. Functions always end with a return statement, which is the output or final product of the task. This is how a function would look like:<p>
         <div class="code">function letterCounter(word, letter) {</div>
@@ -115,7 +115,7 @@ function refreshLessonPage() {
         <div class="code">console.log(letterCounter("banana", "a"));</div>`;
     } else if (lessonNumber == 7) {
         //&emsp; is a tab
-        lessonSection.innerHTML = 
+        lessonSection.innerHTML =
             `<h2><img src="${logoLink}" height=30>Lesson 7: Data Type of Strings</h2>
         <p>So far we have learned about two different data types: numbers and strings. Data types are different types of values that are stored in variables. Now we will learn about strings, which are sets of zero or more characters written inside quotes. Let's create some strings:</p>
         <div class="code">var name = "Adam Clark";</div>
@@ -126,7 +126,7 @@ function refreshLessonPage() {
         <p>Strings have different methods, which let you do different things with strings. Methods always follow the end of a string and begin with a period. Here is a method that gives us the length of a string:
         <div class="code">var string = 'supercalifragilisticexpialidocious';</div>
         <div class="code">console.log(string.length);</div>
-        <div class="code">Output: 34</div>
+        <div class="code">--> 34</div>
         <p> There are various other methods such as .indexOf, which gives us the index of a character within a string, and .split, which splits a string.</p>
         <p><challenge>Challenge 1: Code a program that creates two string variables: name and city, and set them equal to Batman and the city he lives in: Gotham City. Then print a sentence to the console that states where Batman lives. You will need to include " lives in " in the middle of your console.log() statement.</challenge></p>`;
     } else if (lessonNumber == 8) {
@@ -139,12 +139,51 @@ function refreshLessonPage() {
         //&emsp; is a tab
         lessonSection.innerHTML = `<h2><img src="${logoLink}" height=30>Lesson 10: Classes</h2>
         <p>Classes are templates used to create objects in Javascript, which include variables and methods that are passed on to every object created by a class. You can initialize a class by using the class keyword:</p>
+            <div class="code">class Car {</div>
+            <div class="code">&emsp; constructor(name, year) {</div>
+            <div class="code">&emsp; &emsp; this.name = name;</div>
+            <div class="code">&emsp; &emsp; this.year = year;</div>
+            <div class="code">&emsp; }</div>
+            <div class="code">};</div>
+        <p>In the above code, we create a new class that we call Car. Car has a constructor, which is the method used to create new objects that are based on the class. The constructor has two paramaters, which are name and year. Within the constructor, we make the objects properties of the two parameters: name and year. You can create a new object based on class car by using the new keyword, followed by the class name, and passing in the paramaters for the constructor to "construct" the new object which is an instance of the class. Here is an example:</p>
+            <div class="code">class Car {</div>
+            <div class="code">&emsp; constructor(name, year) {</div>
+            <div class="code">&emsp; &emsp; this.name = name;</div>
+            <div class="code">&emsp; &emsp; this.year = year;</div>
+            <div class="code">&emsp; }</div>
+            <div class="code">};</div>
+            <div class="code">var Ford = new Car("Ford Raptor", 2018);</div>
+            <div class="code">console.log(Ford.name);</div>
+            <div class="code">console.log(Ford.year);</div>
+            <div class="code">--> Ford Raptor</div>
+            <div class="code">--> 2018</div>
+        <p>Much like objects, classes can also support methods, which are inherited and a part of all objects that are made as new instances of the class. Here is an alternative example to the previous one, the difference being that this one uses a method:</p>
         <div class="code">class Car {</div>
-        <div class="code">&emsp; constructor(name, year) {</div>
-        <div class="code">&emsp; &emsp; this.name = name;</div>
-        <div class="code">&emsp; &emsp; this.year = year;</div>
-        <div class="code">&emsp; }</div>
-        <div class="code">};</div>
+            <div class="code">&emsp; constructor(name, year) {</div>
+            <div class="code">&emsp; &emsp; this.name = name;</div>
+            <div class="code">&emsp; &emsp; this.year = year;</div>
+            <div class="code">&emsp; }</div>
+            <div class="code">&emsp; printValues() {</div>
+            <div class="code">&emsp; &emsp; console.log(this.name);</div>
+            <div class="code">&emsp; &emsp; console.log(this.year);</div>
+            <div class="code">&emsp; }</div>
+            <div class="code">};</div>
+            <div class="code">var Ford = new Car("Ford Raptor", 2018);</div>
+            <div class="code">Ford.printValues();</div>
+            <div class="code">--> Ford Raptor</div>
+            <div class="code">--> 2018</div>
+
+        <p><challenge>In this challenge you will have to write a program that simulates a student at a school.
+        <br>Create a class called Student that has 3 parameters for the constructor: name, grade, gpa.
+        <br>Have the constructor set the local values name, grade, and gpa to the corresponding parameters 
+        <br>Have a method called graduate that will increase the student's grade by one year 
+        <br>Have a method called changeGPA that takes a number as a parameter, and changes the student's gpa to that number 
+        <br>Have a method called rollCall that prints out the student's name, grade, and gpa on seperate lines (in that order)
+        <br>Create a student called Arden. His name should be Arden, grade 10, and his gpa is 3.9
+        <br>use Arden's graduate method.
+        <br>use Arden's changeGPA method to make it 3.7
+        <br>use Arden's rollCall method to print out the final results to the console.
+        </challenge></p>
         `;
     }
 }
