@@ -11,9 +11,10 @@ div.field {
 }
 
 pre {
-    background-color: white;
+    background-color: rgb(240, 239, 239);
     width: 600px;
 }
+
 .code {
     font-family: 'Consolas';
     font-size: 16px;
@@ -23,7 +24,7 @@ pre {
 
 textarea {
     resize: none;
-    width: 700px;
+    width: 100%;
     height: 400px;
     color: black;
     background-color: white;
@@ -40,7 +41,20 @@ textarea {
 }
 
 body {
-    background-color: #E5E4E2;
+    background-color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 h1 {
@@ -70,27 +84,30 @@ p {
     border: none;
     font-size: 16px;
 }
+
 challenge {
     color: rgb(46, 161, 56);
 }
+
 .center-text {
     text-align: center;
 }
-.fade
-{
-        opacity:0.5;
+
+.fade {
+    opacity: 0.5;
 }
-.fade:hover
-{
-        opacity:1;
+
+.fade:hover {
+    opacity: 1;
 }
+
 button {
     background-color: #bbb;
     padding: .2em;
     margin-left: 1em;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    border-radius: 10px;
+    border-radius: 0px;
     color: #fff;
     font-family: 'Consolas';
     /*Oswald is a great font*/
@@ -100,5 +117,5 @@ button {
 }
 
 button:hover {
-    background-color: rgb(172, 122, 15);
+    background-color: rgb(255, 244, 96);
 }
