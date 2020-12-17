@@ -31,12 +31,12 @@ textarea {
 }
 
 ::selection {
-    background: #eeb005da;
+    background: rgb(255, 244, 96);;
     /* WebKit/Blink Browsers */
 }
 
 ::-moz-selection {
-    background: #eeb005da;
+    background: rgb(255, 244, 96);;
     /* Gecko Browsers */
 }
 
