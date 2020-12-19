@@ -102,17 +102,29 @@ function refreshLessonPage() {
         //&emsp; is a tab
         lessonSection.innerHTML =
             `<h2><img src="${logoLink}" height=30>Lesson 6: Functions</h2>
-        <p>Functions in JavaScript are blocks of code that are meant to perform some sort of task. This could be adding two numbers, reversing a string, or anything else. Functions always end with a return statement, which is the output or final product of the task. This is how a function would look like:<p>
-        <div class="code">function letterCounter(word, letter) {</div>
-        <div class="code">&emsp; var letter_count = 0;</div>
-        <div class="code">&emsp; for (i = 0; i < word.length; i++) {</div>
-        <div class="code">&emsp; &emsp; if (word[i] == letter) {</div>
-        <div class="code">&emsp; &emsp; &emsp; letter_count = letter_count + 1;</div>
-        <div class="code">&emsp; &emsp; }</div>
-        <div class="code">&emsp; }</div>
-        <div class="code">&emsp; return letter_count;</div>
+        <p>Functions in JavaScript are blocks of reusable code that are meant to perform some sort of task. This could be adding two numbers, reversing a string, or anything else. Functions always end with a return statement, which is the final output of the task. Here is a function that returns area of a triangle, given its base and height:<p>
+        <div class="code">function triangleArea(base, height) {</div>
+        <div class="code">&emsp; return base * height / 2;</div>
         <div class="code">}</div>
-        <div class="code">console.log(letterCounter("banana", "a"));</div>`;
+        <div class="code">console.log(triangleArea(10, 12));;</div>
+        <div class="code">--> 60</div>
+        <p> First we defined the function by naming it and giving it two parameters, which are the words inside the parentheses. Then we did a task with those parameters by multiplying them together and dividing by two. Finally we returned the area of the triangle in a return statement. These are all components you will need in functions.<p>
+        <p> Logical operators are also very useful in functions and coding in general. There are three operators: && (and) || (or) ! (not). They are often used in conditional statements.<p>
+        <div class="code">//x=6 and y=3</div>
+        <div class="code">if (x < 10 && y == 3) //True</div>
+        <div class="code">if (x == 5 || y == 5) //False</div>
+        <div class="code">if !(x == y) //True</div>
+        <p> If/else statements, while loops, for loops, and logical operators are often used within functions. They are very helpful for performing certain tasks. For example, if we wanted to check how many vowels were in a word, this is what it would look like:<p>
+        <div class="code">function vowelCount(word) {</div>
+        <div class="code">&emsp;var count = 0;</div>
+        <div class="code">&emsp;for (i=0; i<word.length; i++) {</div>
+        <div class="code">&emsp; &emsp;if (word[i] == "a" || word[i] == "e" || word[i] == "i" || word[i] == "o" || word[i] == "u") {</div>
+        <div class="code">&emsp; &emsp; &emsp;count += 1;</div>
+        <div class="code">&emsp; &emsp;}</div>
+        <div class="code">&emsp;}</div>
+        <div class="code">&emsp;return count;</div>
+        <div class="code">}</div>
+        <p><challenge>Challenge: Create a function called temperatureCheck that checks if a temperature in Celsius is equal to a given temperature in Fahrenheit AND equal to a given temperature in Kelvin. There will be three parameters, Celsius, Fahrenheit, and Kelvin, in that order. The conversion from Celsius to Fahrenheit is: Celsius * 9/5 + 32. The conversion from Celsius to Kelvin is: Celsius + 273. If the Celsius value is equal to both the Fahrenheit and Kelvin values, then the function should return true. Otherwise, it should return false. Outside of the function, you should call it twice, first with the parameters: 35, 95, and 308. Then call it with the parameters: 20, 67, 423.</challenge></p>`;
     } else if (lessonNumber == 7) {
         //&emsp; is a tab
         lessonSection.innerHTML =
