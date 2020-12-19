@@ -36,7 +36,7 @@ const requiredKeywords =
         ["var", "/", "pointsReceived", "59", "totalPossiblePoints", "73", "if", "else", ";", ".899", ".799", ".699", ".599", "A", "B", "C", "D", "F", "{", "}"],//3
         ["var", "x", "while"], //4
         ["var", "x", "for", "-="],//5
-        ["function temperatureCheck(", "temperatureCheck(35, 95, 308)", "temperatureCheck(20, 67, 423)", "&&", "return true", "return false", "if (" "else"] //6
+        ["function temperatureCheck(", "temperatureCheck(35, 95, 308)", "temperatureCheck(20, 68, 423)", "&&", "return true", "return false", "if (" "else"] //6
         ["var", "name", "city", ";", " lives in ", "console.log(name", "+"],//7
         [], //8
         [],//9
