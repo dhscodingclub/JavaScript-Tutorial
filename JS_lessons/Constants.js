@@ -22,7 +22,7 @@ const desiredOutputs =
         ["B"], //3
         ["10", "9.5", "9", "8.5", "8", "7.5", "7", "6.5", "6", "5.5", "5", "4.5", "4", "3.5", "3", "2.5", "2", "1.5", "1", "0.5", "0"], //4
         ["10", "9.5", "9", "8.5", "8", "7.5", "7", "6.5", "6", "5.5", "5", "4.5", "4", "3.5", "3", "2.5", "2", "1.5", "1", "0.5", "0"], //5
-        [], //6
+        [true, false], //6
         ["Batman lives in Gotham City"], //7
         [], //8
         [], //9
@@ -36,7 +36,7 @@ const requiredKeywords =
         ["var", "/", "pointsReceived", "59", "totalPossiblePoints", "73", "if", "else", ";", ".899", ".799", ".699", ".599", "A", "B", "C", "D", "F", "{", "}"],//3
         ["var", "x", "while"], //4
         ["var", "x", "for", "-="],//5
-        [], //6
+        ["function temperatureCheck(", "temperatureCheck(35, 95, 308)", "temperatureCheck(20, 67, 423)", "&&", "return true", "return false", "if (" "else"] //6
         ["var", "name", "city", ";", " lives in ", "console.log(name", "+"],//7
         [], //8
         [],//9
