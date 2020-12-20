@@ -106,15 +106,15 @@ function refreshLessonPage() {
         <div class="code">function triangleArea(base, height) {</div>
         <div class="code">&emsp; return base * height / 2;</div>
         <div class="code">}</div>
-        <div class="code">console.log(triangleArea(10, 12));;</div>
+        <div class="code">console.log(triangleArea(10, 12));</div>
         <div class="code">--> 60</div>
-        <p> First we defined the function by naming it and giving it two parameters, which are the words inside the parentheses. Then we did a task with those parameters by multiplying them together and dividing by two. Finally we returned the area of the triangle in a return statement. These are all components you will need in functions.<p>
-        <p> Logical operators are also very useful in functions and coding in general. There are three operators: && (and) || (or) ! (not). They are often used in conditional statements.<p>
+        <p>First we defined the function by naming it and giving it two parameters, which are the words inside the parentheses. Then we did a task with those parameters by multiplying them together and dividing by two. Finally we returned the area of the triangle in a return statement. These are all components you will need in functions.<p>
+        <p>Logical operators are also very useful in functions and coding in general. There are three operators: && (and) || (or) ! (not). They are often used in conditional statements.<p>
         <div class="code">//x=6 and y=3</div>
         <div class="code">if (x < 10 && y == 3) //True</div>
         <div class="code">if (x == 5 || y == 5) //False</div>
         <div class="code">if !(x == y) //True</div>
-        <p> If/else statements, while loops, for loops, and logical operators are often used within functions. They are very helpful for performing certain tasks. For example, if we wanted to check how many vowels were in a word, this is what it would look like:<p>
+        <p>If/else statements, while loops, for loops, and logical operators are often used within functions. They are very helpful for performing certain tasks. For example, if we wanted to check how many vowels were in a word, this is what it would look like:<p>
         <div class="code">function vowelCount(word) {</div>
         <div class="code">&emsp;var count = 0;</div>
         <div class="code">&emsp;for (i=0; i<word.length; i++) {</div>
