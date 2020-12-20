@@ -146,7 +146,15 @@ function refreshLessonPage() {
         lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 8: Arrays</h2>`;
     } else if (lessonNumber == 9) {
         //&emsp; is a tab
-        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 9: Objects</h2>`;
+        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 9: Objects</h2>
+        <p>We've already covered variables, and how they contain data like numbers or strings. Now we'll learn about objects, which can contain many values. For example, the code below.</p>
+        <div class="code">var person = {name: "Jane Doe", age: 35}</div>
+        <p>This creates a person object, with a name of "Jane Doe" and an age of 35.</p>
+        <p>The way to access these new values is to use <i>object.value</i> or <i>object["value"]</i>. The following codes both access the first name of the person object we created earlier.</p>
+        <div class="code">person.name;</div>
+        <div class="code">person["name"];</div>
+        <p>Objects can also contain methods or functions. These do stuff to the object variables and is stored in a similar way to data.</p>
+        <div class="code"`;
     } else if (lessonNumber == 10) {
         //&emsp; is a tab
         lessonSection.innerHTML = `<h2><img src="${logoLink}" height=30>Lesson 10: Classes</h2>
