@@ -25,7 +25,7 @@ const desiredOutputs =
         [true, false], //6
         ["Batman lives in Gotham City"], //7
         ["insert_answer_here"], //8
-        ["insert_answer_here"], //9
+        ["This car is a blue Toyota from 2002 with a plate number of 12345"], //9
         ["Arden", 11, 3.7] //10
     ];
 const requiredKeywords =
@@ -39,6 +39,6 @@ const requiredKeywords =
         ["function temperatureCheck(", "temperatureCheck(35, 95, 308)", "temperatureCheck(20, 68, 423)", "&&", "return true", "return false", "if (", "else"], //6
         ["var", "name", "city", ";", " lives in ", "console.log(name", "+"],//7
         ["insert_keywords_here"], //8
-        ["insert_keywords_here"],//9
+        ["var", "car", "brand", "Toyota", "plateNumber", "12345", "color", "blue", "displayInfo", "function()", "console.log", "car.displayInfo()"],//9
         ["class", "Student", "constructor", "name", "grade", "gpa", "this.", "graduate", "changeGPA", "rollCall", "var", "Arden", "new", "10", "3.9", "3.7", ".graduate();", ".changeGPA(", ".rollCall();"] //10
     ];

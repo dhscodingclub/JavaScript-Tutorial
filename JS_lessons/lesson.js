@@ -154,7 +154,16 @@ function refreshLessonPage() {
         <div class="code">person.name;</div>
         <div class="code">person["name"];</div>
         <p>Objects can also contain methods or functions. These do stuff to the object variables and is stored in a similar way to data.</p>
-        <div class="code"`;
+        <div class="code">var person = { </div>
+        <div class="code">&emsp;firstName: "Jane", </div>
+        <div class="code">&emsp;lastName: "Doe", </div>
+        <div class="code">&emsp;fullName : function(){ </div>
+        <div class="code">&emsp;&emsp;return this.firstName + " " + this.lastName;</div>
+        <div class="code">&emsp;}</div>
+        <div class="code">};</div>
+        <p>With this code, we have created an object method that uses the firstName and lastName variables inside the same object. <em>this</em> refers to the "owner" of the function, which would be the person object, and you would reference the object variables the same way. The way to access the object functions now is to call <i>object.methodName();</i> So for example:</p>
+        <div class="code">var fullname = person.fullName();</div>
+        <p><challenge>Challenge: To practice, create a car object with these details. A brand of Toyota, year of 2002, plateNumber of 12345, color of blue, and a function called displayInfo to return a description of "This car is a <em>color</em> <em>brand</em> from <em>year</em> with a plate number of <em>plateNumber</em>. Then call the function and display the output.</challenge></p>`;
     } else if (lessonNumber == 10) {
         //&emsp; is a tab
         lessonSection.innerHTML = `<h2><img src="${logoLink}" height=30>Lesson 10: Classes</h2>
