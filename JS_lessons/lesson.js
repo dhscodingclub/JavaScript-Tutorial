@@ -116,8 +116,8 @@ function refreshLessonPage() {
         <div class="code">if !(x == y) //True</div>
         <p>If/else statements, while loops, for loops, and logical operators are often used within functions. They are very helpful for performing certain tasks. For example, if we wanted to check how many vowels were in a word, this is what it would look like:</p>
         <div class="code">function vowelCount(word) {</div>
-        <div class="code">&emsp;var count = 0;</div>
-        <div class="code">&emsp;for (i=0; i<word.length; i++) {</div>
+        <div class="code">&emsp; var count = 0;</div>
+        <div class="code">&emsp; for (i=0; i < word.length; i++) {</div>
         <div class="code">&emsp; &emsp;if (word[i] == "a" || word[i] == "e" || word[i] == "i" || word[i] == "o" || word[i] == "u") {</div>
         <div class="code">&emsp; &emsp; &emsp;count += 1;</div>
         <div class="code">&emsp; &emsp;}</div>
