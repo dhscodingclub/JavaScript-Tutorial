@@ -27,9 +27,9 @@
 <!--Import the lessons function from lessons.js file-->
 <script src="./lesson.js"></script>
 <script src="./Constants.js"></script>
+<script src="./CookieCode.js"></script>
+<body onload="checkCookie()"></body> /**/
 <script>
-    //start with lesson 0
-    var lessonNumber = 0;
     refreshLessonPage();
     let consoleLogs = [];
     var displayConsole = document.getElementById("ConsoleOutput");
@@ -51,6 +51,7 @@
                 //The key matches the lesson, so jump to that lesson
                 lessonNumber = i;
                 refreshLessonPage();
+                setCookie("lesson", lessonNumber, 365);
             }
         }
     }
@@ -91,6 +92,8 @@
         //Automatically clear the output console and input textarea
         displayConsole.value = "";
         inputCode.value = "";
+        //update the cookie with the lesson number
+        setCookie("lesson", lessonNumber, 365);
     }
     function checkWithAnswer(codeOutput, rawCode) {
         let Grade = document.getElementById("grade");
