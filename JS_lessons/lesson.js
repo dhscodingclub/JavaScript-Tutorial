@@ -144,7 +144,7 @@ function refreshLessonPage() {
         <div class="code">--> 5</div>
         <p>Another useful method is .split(), which splits a string, based on the portion of the string in the parentheses. For example, .split(" ") would remove all spaces from a string and replace those strings with commas.</p>
         <p><challenge>Challenge 1: Code a program that creates two string variables: name and city, and set them equal to Batman and the city he lives in: Gotham City. Then print a sentence to the console that states where Batman lives. You will need to include " lives in " in the middle of your console.log() statement.</challenge></p>
-        <p><challenge>Challenge 2: Make a function that takes one parameter (sentence) and returns the third word in that sentence by using .split(). Then call this function using the sentence "My favorite color is purple" and print the output. Hint: Make sure you use the correct index.</challenge></p>`;
+        <p><challenge>Challenge 2: Make a function that takes one parameter (sentence) and returns the third word in that sentence by using .split(). Then call this function using the sentence "My favorite color is purple" and print the output. Make sure you use the correct index.</challenge></p>`;
     } else if (lessonNumber == 8) {
         //&emsp; is a tab
         lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 8: Arrays</h2>
@@ -159,7 +159,7 @@ function refreshLessonPage() {
         <div class="code">console.log(array.length);</div>
         <div class="code">--> ['red', 'orange', 'brown', 'green', 'blue', 'indigo', 'violet', 'white']</div>
         <div class="code">--> 8</div>
-        <p><challenge>Create a function that takes an array of numbers as its parameter. For every number in the array, check if it is even or odd, and replace that number in the array with 'even or 'odd' depending on if it is even or odd. Then return the array. Print out the function with the following array: [18, 7, 1, 16, 5, 12, 4]. A number with a remainder of 0 when divided by 2 is even, so the remainder operator (%) will be helpful for this.</challenge></p>`;
+        <p><challenge>Create a function that takes an array of numbers as its parameter. For every number in the array, multiply it by 10 and replace the number in the array with that value. Print out the function with the following array: [18, 7, 1, 16, 5, 12, 4]</challenge></p>`;
     } else if (lessonNumber == 9) {
         //&emsp; is a tab
         lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 9: Objects</h2>
