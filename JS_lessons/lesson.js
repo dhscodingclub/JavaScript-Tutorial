@@ -139,8 +139,12 @@ function refreshLessonPage() {
         <div class="code">var string = 'supercalifragilisticexpialidocious';</div>
         <div class="code">console.log(string.length);</div>
         <div class="code">--> 34</div>
-        <p> There are various other methods such as .indexOf, which gives us the index of a character within a string, and .split, which splits a string.</p>
-        <p><challenge>Challenge 1: Code a program that creates two string variables: name and city, and set them equal to Batman and the city he lives in: Gotham City. Then print a sentence to the console that states where Batman lives. You will need to include " lives in " in the middle of your console.log() statement.</challenge></p>`;
+        <p> There are various other methods such as .indexOf(), which gives us the index of a character within a string. An index is a number that represents a character's position in a string. Note that indices begin at 0, meaning the third index of a string, would be the fourth character of that string.</p>
+        <div class="code">console.log("helloworld".indexOf("w");</div>
+        <div class="code">--> 5</div>
+        <p>Another useful method is .split(), which splits a string, based on the portion of the string in the parentheses. For example, .split(" ") would remove all spaces from a string and replace those strings with commas.</p>
+        <p><challenge>Challenge 1: Code a program that creates two string variables: name and city, and set them equal to Batman and the city he lives in: Gotham City. Then print a sentence to the console that states where Batman lives. You will need to include " lives in " in the middle of your console.log() statement.</challenge></p>
+        <p><challenge>Challenge 2: Make a function that takes one parameter (sentence) and returns the third word in that sentence by using .split(). Then call this function using the sentence "My favorite color is purple" and print the output. Hint: Make sure you use the correct index.</challenge></p>`;
     } else if (lessonNumber == 8) {
         //&emsp; is a tab
         lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 8: Arrays</h2>`;
