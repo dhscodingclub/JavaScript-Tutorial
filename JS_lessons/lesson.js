@@ -153,10 +153,10 @@ function refreshLessonPage() {
         <div class="code">console.log(array[4]);</div>
         <div class="code">--> 'blue'</div>
         <p>Arrays have indices just like strings, except each index is a different item rather than characteter. We can do a lot of things with arrays, such as replace their items, add items, or find their length.</p>
-        <div class="code">array[2] = 'brown';</div>
-        <div class="code">array.push('white');</div>
+        <div class="code">array[2] = 'brown'; //replace 'yellow' with 'brown'</div>
+        <div class="code">array.push('white'); //add item to array</div>
         <div class="code">console.log(array);</div>
-        <div class="code">console.log(array.length);</div>
+        <div class="code">console.log(array.length) //print length of array;</div>
         <div class="code">--> ['red', 'orange', 'brown', 'green', 'blue', 'indigo', 'violet', 'white']</div>
         <div class="code">--> 8</div>
         <p><challenge>Create a function that takes an array of numbers as its parameter. For every number in the array, multiply it by 10 and replace the number in the array with that value. Print out the function with the following array: [18, 7, 1, 16, 5, 12, 4]</challenge></p>`;
