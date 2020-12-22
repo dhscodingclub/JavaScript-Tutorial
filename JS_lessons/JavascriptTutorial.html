@@ -2,25 +2,32 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- this is the code that will allow icon to be visible in the title bar of the brower -->
-<link rel="icon" type="image/ico" href="../Logo.png" />
+<link rel="icon" type="image/ico" href="../Javascript.png" />
 <title>DHS JS Tutorial</title>
 <!-- you can also say this:  <link rel="icon" type="image/png" href="location/image.png" /> -->
 <h1 class="center-text"><span
         style="background-color: rgb(255, 251, 0); padding-left: 5px; padding-right: 5px;">JavaScript Tutorial</span>
 </h1>
 <div id="lessonKey"></div>
-<input type="text" id="keyEnter" value="" placeholder="Lesson Key" maxlength="100" />
-<button id="jump" style="display: inline;">Jump</button>
-<div id="lesson"></div>
-<div class="row">
-    <div class="column">
-        <textarea id="code" style="width: 90%;" spellcheck="false"></textarea>
-    </div>
-    <div class="column">
-        <div><button id="run" style="width: 90%;">Run Code</button></div>
-        <h2 style="padding-bottom: 0px;">Code Output Console</h2>
-        <div id="grade"><p>Output from your code will show up in this console below.</p></div>
-        <textarea id="ConsoleOutput" style="width: 90%; height: 200px;" disabled=true></textarea>
+<div id="mainBody">
+    <input type="text" id="keyEnter" value="" placeholder="Lesson Key" maxlength="100" />
+    <button id="jump" style="display: inline;">Jump To Lesson</button>
+    <button id="prev" style="display: inline;">Previous Lesson</button>
+    <button id="next" style="display: inline;">Next Lesson</button>
+    <div id="lesson"></div>
+    <div class="row">
+        <div class="column">
+            <textarea id="code" style="width: 90%;" spellcheck="false"></textarea>
+        </div>
+        <div class="column">
+            <div><button id="run" style="width: 90%;">Run Code</button></div>
+            <h2 style="padding-bottom: 0px;">Code Output Console</h2>
+            <div id="grade">
+                <p>Output from your code will show up in this console below.</p>
+                <p style="color: white">Incorrect<img src="../Fail.png" height=15 style="visibility:hidden"></p>
+            </div>
+            <textarea id="ConsoleOutput" style="width: 90%; height: 200px;" disabled=true></textarea>
+        </div>
     </div>
 </div>
 <link rel="stylesheet" href="../StyleSheet.css">
@@ -28,7 +35,8 @@
 <script src="./lesson.js"></script>
 <script src="./Constants.js"></script>
 <script src="./CookieCode.js"></script>
-<body onload="checkCookie()"></body> /**/
+
+<body onload="checkCookie()"></body>
 <script>
     refreshLessonPage();
     let consoleLogs = [];
@@ -44,6 +52,20 @@
         evalAndReturn(codeValue);
         //console.log(codeValue); // <- This line is only for debugging; it breaks the code.
     });
+    let previous = document.getElementById("prev");
+    previous.addEventListener("click", () => {
+        if (lessonNumber > 0) {
+            lessonNumber--;
+        }
+        //The top lesson is not changed
+    });
+    let next = document.getElementById("next");
+    next.addEventListener("click", () => {
+        if (lessonNumber < lessonTally) {
+            lessonNumber++;
+        }
+        //don't surpass the top lesson; that's cheatin'
+    })
     let jumper = document.getElementById("jump");
     function checkKey() {
         for (let i = 0; i < lessonSkipCodes.length; i++) {
@@ -52,6 +74,10 @@
                 lessonNumber = i;
                 refreshLessonPage();
                 setCookie("lesson", lessonNumber, 365);
+                if (lessonTally < lessonNumber) {
+                    //We have surpassed the tally
+                    setCookie("tally", lessonNumber, 365);
+                }
             }
         }
     }
@@ -84,7 +110,8 @@
     }
     function nextLesson() {
         let Grade = document.getElementById("grade");
-        Grade.innerHTML = `<p>Output from your code will show up in this console below.</p>`;
+        Grade.innerHTML = `<p>Output from your code will show up in this console below.</p>
+        <p style="color: white">Incorrect<img src="../Fail.png" height=15 style="visibility:hidden"></p>`;
         lessonNumber++;
         refreshLessonPage();
         //Automatically go to the top of the page
@@ -94,6 +121,10 @@
         inputCode.value = "";
         //update the cookie with the lesson number
         setCookie("lesson", lessonNumber, 365);
+        if (lessonTally < lessonNumber) {
+            //We have surpassed the tally
+            setCookie("tally", lessonNumber, 365);
+        }
     }
     function checkWithAnswer(codeOutput, rawCode) {
         let Grade = document.getElementById("grade");

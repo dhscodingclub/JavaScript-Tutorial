@@ -17,7 +17,7 @@ function refreshLessonPage() {
         <p><challenge>Challenge: can you code a program that prints "Hello, World!" to the console?</challenge></p>`;
     } else if (lessonNumber == 1) {
         lessonSection.innerHTML =
-            `<h2><img src="${logoLink}" height=30>Lesson 1.1: Variables introduction</h2>
+            `<h2><img src="${logoLink}" height=30>Lesson 1: Variables</h2>
         <p>A variable is a container for storing a data value. Variables are declared with the var keyword, and you can set their data value equal to something by using the equals (=) sign.</p>
         <div class="code">var x = 5;</div>
         <p>The line of code above does 2 things. Firstly, it initializes a new variable called x with the "var" keyword. Secondly, it sets the new variable of x to the value of 5.</p>
@@ -143,10 +143,10 @@ function refreshLessonPage() {
         <p><challenge>Challenge 1: Code a program that creates two string variables: name and city, and set them equal to Batman and the city he lives in: Gotham City. Then print a sentence to the console that states where Batman lives. You will need to include " lives in " in the middle of your console.log() statement.</challenge></p>`;
     } else if (lessonNumber == 8) {
         //&emsp; is a tab
-        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 8: Arrays</h2>`;
+        lessonSection.innerHTML = `<h2><img src="${logoLink}" height=30>Lesson 8: Arrays</h2>`;
     } else if (lessonNumber == 9) {
         //&emsp; is a tab
-        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 9: Objects</h2>
+        lessonSection.innerHTML = `<h2><img src="${logoLink}" height=30>Lesson 9: Objects</h2>
         <p>We've already covered variables, and how they contain data like numbers or strings. Now we'll learn about objects, which can contain many values. For example, the code below.</p>
         <div class="code">var person = {name: "Jane Doe", age: 35}</div>
         <p>This creates a person object, with a name of "Jane Doe" and an age of 35.</p>
@@ -214,5 +214,7 @@ function refreshLessonPage() {
         <br>use Arden's rollCall method to print out the final results to the console.
         </challenge></p>
         `;
+    } else if (lessonNumber > 10) {
+        document.getElementById("mainBody").innerHTML = `<h1>Congratulations!</h1>`
     }
 }
