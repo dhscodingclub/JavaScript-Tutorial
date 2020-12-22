@@ -159,7 +159,7 @@ function refreshLessonPage() {
         <div class="code">console.log(array.length) //print length of array;</div>
         <div class="code">--> ['red', 'orange', 'brown', 'green', 'blue', 'indigo', 'violet', 'white']</div>
         <div class="code">--> 8</div>
-        <p><challenge>Create a function that takes an array of numbers as its parameter. For every number in the array, multiply it by 10 and replace the number in the array with that value. Print out the function with the following array: [18, 7, 1, 16, 5, 12, 4]</challenge></p>`;
+        <p><challenge>Challenge: Create a function that takes an array of numbers as its parameter. For every number in the array, multiply it by 10 and replace the number in the array with that value. Print out the function with the following array: [18, 7, 1, 16, 5, 12, 4]</challenge></p>`;
     } else if (lessonNumber == 9) {
         //&emsp; is a tab
         lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 9: Objects</h2>
