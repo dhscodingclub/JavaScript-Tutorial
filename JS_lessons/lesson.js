@@ -129,7 +129,7 @@ function refreshLessonPage() {
         //&emsp; is a tab
         lessonSection.innerHTML =
             `<h2><img src="${logoLink}" height=30>Lesson 7: Data Type of Strings</h2>
-        <p>So far we have learned about two different data types: numbers and strings. Data types are different types of values that are stored in variables. Now we will learn about strings, which are sets of zero or more characters written inside quotes. Let's create some strings:</p>
+        <p>So far we've learned about two different data types: numbers and strings. Data types are different types of values that are stored in variables. Now we will learn about strings, which are sets of zero or more characters written inside quotes. Let's create some strings:</p>
         <div class="code">var name = "Adam Clark";</div>
         <div class="code">var age = '35';</div>
         <div class="code">console.log(name + ' is ' + age);</div>
@@ -147,7 +147,19 @@ function refreshLessonPage() {
         <p><challenge>Challenge 2: Make a function that takes one parameter (sentence) and returns the third word in that sentence by using .split(). Then call this function using the sentence "My favorite color is purple" and print the output. Hint: Make sure you use the correct index.</challenge></p>`;
     } else if (lessonNumber == 8) {
         //&emsp; is a tab
-        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 8: Arrays</h2>`;
+        lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 8: Arrays</h2>
+        <p>Arrays in JavaScript are lists elements that share the same data type. There are arrays of integers and arrays of strings but not a mix of both. Arrays are created with brackets and commas that separate each item.</p>
+        <div class="code">var array = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];</div>
+        <div class="code">console.log(array[4]);</div>
+        <div class="code">--> 'blue'</div>
+        <p>Arrays have indices just like strings, except each index is a different item rather than characteter. We can do a lot of things with arrays, such as replace their items, add items, or find their length.</p>
+        <div class="code">array[2] = 'brown';</div>
+        <div class="code">array.push('white');</div>
+        <div class="code">console.log(array);</div>
+        <div class="code">console.log(array.length);</div>
+        <div class="code">--> ['red', 'orange', 'brown', 'green', 'blue', 'indigo', 'violet', 'white']</div>
+        <div class="code">--> 8</div>
+        <p><challenge>Create a function that takes an array of numbers as its parameter. For every number in the array, check if it is even or odd, and replace that number in the array with 'even or 'odd' depending on if it is even or odd. Then return the array. Print out the function with the following array: [18, 7, 1, 16, 5, 12, 4]. A number with a remainder of 0 when divided by 2 is even, so the remainder operator (%) will be helpful for this.</challenge></p>`;
     } else if (lessonNumber == 9) {
         //&emsp; is a tab
         lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 9: Objects</h2>
