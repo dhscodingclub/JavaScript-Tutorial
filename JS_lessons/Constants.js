@@ -24,7 +24,7 @@ const desiredOutputs =
         ["10", "9.5", "9", "8.5", "8", "7.5", "7", "6.5", "6", "5.5", "5", "4.5", "4", "3.5", "3", "2.5", "2", "1.5", "1", "0.5", "0"], //5
         [true, false], //6
         ["Batman lives in Gotham City", "color"], //7
-        ["insert_answer_here"], //8
+        [[180, 70, 10, 160, 50, 120, 40]], //8
         ["This car is a blue Toyota from 2002 with a plate number of 12345"], //9
         ["Arden", 11, 3.7] //10
     ];
@@ -38,7 +38,7 @@ const requiredKeywords =
         ["var", "x", "for", "-="],//5
         ["function temperatureCheck(", "temperatureCheck(35, 95, 308)", "temperatureCheck(20, 68, 423)", "&&", "return true", "return false", "if (", "else", "[2]", "function", ".split(", "My favorite color is purple"], //6
         ["var", "name", "city", ";", " lives in ", "console.log(name", "+"],//7
-        ["insert_keywords_here"], //8
+        ["array[i] =", "function", "10", "*", ".length", "=0", "for", "return", "console.log(", "[18, 7, 1, 16, 5, 12, 4]"], //8
         ["var", "car", "brand", "Toyota", "plateNumber", "12345", "color", "blue", "displayInfo", "function()", "console.log", "car.displayInfo()"],//9
         ["class", "Student", "constructor", "name", "grade", "gpa", "this.", "graduate", "changeGPA", "rollCall", "var", "Arden", "new", "10", "3.9", "3.7", ".graduate();", ".changeGPA(", ".rollCall();"] //10
     ];
