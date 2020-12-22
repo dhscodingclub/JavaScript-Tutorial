@@ -148,7 +148,7 @@ function refreshLessonPage() {
     } else if (lessonNumber == 8) {
         //&emsp; is a tab
         lessonSection.innerHTML = `<h2><img src="../Logo.png" height=30>Lesson 8: Arrays</h2>
-        <p>Arrays in JavaScript are lists elements that share the same data type. There are arrays of integers and arrays of strings but not a mix of both. Arrays are created with brackets and commas that separate each item.</p>
+        <p>Arrays in JavaScript are lists of elements that share the same data type. There are arrays of integers and arrays of strings but not a mix of both. Arrays are created with brackets and commas that separate each item.</p>
         <div class="code">var array = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];</div>
         <div class="code">console.log(array[4]);</div>
         <div class="code">--> 'blue'</div>
