@@ -33,9 +33,9 @@ function checkCookie() {
         refreshLessonPage();
     }
     var highestLesson = getCookie("tally");
-    if (wantedLesson != "") {
+    if (highestLesson != "") {
         //We have a lesson tally cookie set, so we tell the lesson tally whats up
-        lessonTally = wantedLesson;
+        lessonTally = highestLesson;
     } else {
         //Set the lesson tally equal to 0; they are new and not returning
         setCookie("tally", 0, 365);
