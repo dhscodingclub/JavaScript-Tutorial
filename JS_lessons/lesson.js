@@ -231,6 +231,8 @@ function refreshLessonPage() {
         </challenge></p>
         `;
     } else if (lessonNumber > 10) {
-        document.getElementById("mainBody").innerHTML = `<h1>Congratulations!</h1>`
+        document.getElementById("mainBody").innerHTML = 
+        `<h1>Congratulations!</h1>
+        <p>Tell your instructor you have completed your lessons</p>`;
     }
 }
