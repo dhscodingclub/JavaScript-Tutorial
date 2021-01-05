@@ -66,6 +66,7 @@
     next.addEventListener("click", () => {
         if (lessonNumber < highestLesson) {
             lessonNumber++;
+            refreshLessonPage();
         }
         //don't surpass the top lesson; that's cheatin'
     })
