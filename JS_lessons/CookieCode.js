@@ -1,3 +1,4 @@
+console.log("a change has been made");
 var lessonNumber = 0; //The lesson page you are currently viewing
 var highestLesson = 0; //The furthest lesson you have access to / went to
 function setCookie(cname, cvalue, exdays) {
