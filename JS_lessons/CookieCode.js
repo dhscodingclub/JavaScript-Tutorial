@@ -1,5 +1,5 @@
 var lessonNumber = 0; //The lesson page you are currently viewing
-var lessonTally = 0; //The furthest lesson you have access to / went to
+var highestLesson = 0; //The furthest lesson you have access to / went to
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -32,13 +32,5 @@ function checkCookie() {
         setCookie("lesson", 0, 365);
         refreshLessonPage();
     }
-    var highestLesson = getCookie("tally");
-    if (highestLesson != "") {
-        //We have a lesson tally cookie set, so we tell the lesson tally whats up
-        lessonTally = highestLesson;
-    } else {
-        //Set the lesson tally equal to 0; they are new and not returning
-        setCookie("tally", 0, 365);
-        refreshLessonPage();
-    }
+    highestLesson = wantedLesson;
 }

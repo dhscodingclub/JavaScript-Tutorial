@@ -38,6 +38,7 @@
 
 <body onload="checkCookie()"></body>
 <script>
+    console.log("v2.0");
     refreshLessonPage();
     let consoleLogs = [];
     var displayConsole = document.getElementById("ConsoleOutput");
@@ -56,12 +57,14 @@
     previous.addEventListener("click", () => {
         if (lessonNumber > 0) {
             lessonNumber--;
+            console.log("lesson minused");
+            refreshLessonPage();
         }
         //The top lesson is not changed
     });
     let next = document.getElementById("next");
     next.addEventListener("click", () => {
-        if (lessonNumber < lessonTally) {
+        if (lessonNumber < highestLesson) {
             lessonNumber++;
         }
         //don't surpass the top lesson; that's cheatin'
@@ -74,9 +77,9 @@
                 lessonNumber = i;
                 refreshLessonPage();
                 setCookie("lesson", lessonNumber, 365);
-                if (lessonTally < lessonNumber) {
+                if (highestLesson < lessonNumber) {
                     //We have surpassed the tally
-                    setCookie("tally", lessonNumber, 365);
+                    highestLesson = lessonNumber;
                 }
             }
         }
@@ -121,9 +124,9 @@
         inputCode.value = "";
         //update the cookie with the lesson number
         setCookie("lesson", lessonNumber, 365);
-        if (lessonTally < lessonNumber) {
+        if (highestLesson < lessonNumber) {
             //We have surpassed the tally
-            setCookie("tally", lessonNumber, 365);
+            highestLesson = lessonNumber;
         }
     }
     function checkWithAnswer(codeOutput, rawCode) {
