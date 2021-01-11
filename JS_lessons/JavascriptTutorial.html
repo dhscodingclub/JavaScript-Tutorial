@@ -19,7 +19,7 @@
         <div class="column" height=400px>
             <textarea id="code" style="width: 90%; height:400px" spellcheck="false"></textarea>
         </div>
-        <div class="column" height=400px>
+        <div id="right" class="column" height=400px>
             <div><button id="run" style="width: 90%; height:10%">Run Code</button></div>
             <h2 style="padding-bottom: 0px; font-size: 2vw;">Code Output Console</h2>
             <div id="grade">
@@ -38,6 +38,12 @@
 
 <body onload="checkCookie()"></body>
 <script>
+    var rightC = document.getElementById("right");
+    balanceColumns();
+    function balanceColumns(){
+        let code = document.getElementById("code");
+        code.style.height = (rightC.offsetHeight - 15) + "px";
+    }
     refreshLessonPage();
     let consoleLogs = [];
     var displayConsole = document.getElementById("ConsoleOutput");
@@ -110,6 +116,7 @@
         }
         checkWithAnswer(consoleLogs, code);
         consoleLogs = [];
+        balanceColumns();
     }
     function nextLesson() {
         let Grade = document.getElementById("grade");
@@ -128,6 +135,7 @@
             //We have surpassed the tally
             highestLesson = lessonNumber;
         }
+        balanceColumns();
     }
     function checkWithAnswer(codeOutput, rawCode) {
         let Grade = document.getElementById("grade");

@@ -18,8 +18,7 @@ pre {
 .code {
     font-family: 'Consolas';
     font-size: 16px;
-    margin-left: 50px;
-    padding-left: 50px;
+    background-color: #c8fac1;
 }
 
 textarea {
@@ -28,6 +27,7 @@ textarea {
     height: 400px;
     color: black;
     background-color: white;
+    border: 3px solid rgb(255, 179, 160);
 }
 
 ::selection {
@@ -80,14 +80,14 @@ h3 {
 }
 
 p {
-    font-family: 'Consolas';
+    font-family: 'Helvetica Neue';
     text-decoration: none;
     border: none;
     font-size: 16px;
 }
 
 challenge {
-    color: rgb(46, 161, 56);
+    color: rgb(151, 144, 253);
 }
 
 .center-text {
@@ -103,7 +103,7 @@ challenge {
 }
 
 button {
-    background-color: #bbb;
+    background-color: rgb(255, 219, 173);
     padding: .2em;
     margin-left: 1em;
     -moz-border-radius: 5px;
@@ -118,5 +118,5 @@ button {
 }
 
 button:hover {
-    background-color: rgb(255, 244, 96);
+    background-color: rgb(255, 190, 51);
 }
