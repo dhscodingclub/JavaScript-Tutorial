@@ -49,6 +49,7 @@ body {
 .column {
     float: left;
     width: 50%;
+    contain: content;
 }
 
 .row:after {
