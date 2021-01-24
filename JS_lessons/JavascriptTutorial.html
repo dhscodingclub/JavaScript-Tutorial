@@ -2,7 +2,7 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- this is the code that will allow icon to be visible in the title bar of the brower -->
-<link rel="icon" type="image/ico" href="../otherLogo.png" />
+<link rel="icon" type="image/ico" href="../js_icon.png" />
 <title>DHS JS Tutorial</title>
 <!-- you can also say this:  <link rel="icon" type="image/png" href="location/image.png" /> -->
 <h1 class="center-text"><span
@@ -12,15 +12,15 @@
     <div id="lessonKey"></div>
     <input type="text" id="keyEnter" value="" placeholder="Lesson Key" maxlength="100" />
     <button id="jump" style="display: inline;">Jump To Lesson</button>
-    <button id="prev" style="display: inline;">Previous Lesson</button>
+    <button id="prev" style="display: inline; margin-left: 150px;">Previous Lesson</button>
     <button id="next" style="display: inline;">Next Lesson</button>
     <div id="lesson"></div>
-    <div class="row" height=400px>
+    <div class="row" height=400px id="codeLandStuff">
         <div class="column" height=400px>
             <textarea id="code" style="width: 90%; height:400px" spellcheck="false"></textarea>
         </div>
         <div id="right" class="column" height=400px>
-            <div><button id="run" style="width: 90%; height:10%">Run Code</button></div>
+            <div><button id="run" style="width: 90%; height:10%; border-radius: 20px;">Run Code</button></div>
             <h2 style="padding-bottom: 0px; font-size: 2vw;">Code Output Console</h2>
             <div id="grade">
                 <p>Output from your code will show up in this console below.</p>
@@ -64,15 +64,18 @@
             lessonNumber--;
             console.log("lesson minused");
             refreshLessonPage();
+            document.getElementById("next").style.display = "inline";
         }
         //The top lesson is not changed
     });
     let next = document.getElementById("next");
     next.addEventListener("click", () => {
-        if (lessonNumber < highestLesson) {
+        lessonNumber++;
+        refreshLessonPage();
+        /*if (lessonNumber < highestLesson) {
             lessonNumber++;
             refreshLessonPage();
-        }
+        }*/
         //don't surpass the top lesson; that's cheatin'
     })
     let jumper = document.getElementById("jump");
@@ -158,7 +161,7 @@
             }
             if (allKeyWords == true) {
                 //We passed!
-                Grade.innerHTML = `<p>Congratulations, your code built successfully and had the corret output!<img src="../Checkmark.png" height=15><button onclick="nextLesson();">Next Lesson</button></p>`;
+                Grade.innerHTML = `<p>Congratulations, your code built successfully and had the correct output!</p><p><img src="../Checkmark.png" height=15><button onclick="nextLesson();">Next Lesson</button></p>`;
             } else {
                 Grade.innerHTML = `<p>The console output is correct, but you have not coded it properly. Please edit your code, making sure that you have followed all instructions, and try again. Taking "shortcuts" are not allowed for passing the lesson.</p>
                 <p style="color: red">Incorrect<img src="../Fail.png" height=15></p>`;

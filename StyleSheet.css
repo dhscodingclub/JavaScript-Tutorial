@@ -16,9 +16,11 @@ pre {
 }
 
 .code {
+    padding: 20px;
     font-family: 'Consolas';
     font-size: 16px;
-    background-color: #c8fac1;
+    background-color: #041d00;
+    color: white;
 }
 
 textarea {
@@ -27,7 +29,9 @@ textarea {
     height: 400px;
     color: black;
     background-color: white;
-    border: 3px solid rgb(255, 179, 160);
+    border: 3px solid rgb(160, 225, 255);
+    font-family: consolas;
+    font-size: 20px;
 }
 
 ::selection {
@@ -83,11 +87,13 @@ p {
     font-family: 'Helvetica Neue';
     text-decoration: none;
     border: none;
-    font-size: 16px;
+    font-size: 22px;
 }
 
 challenge {
-    color: rgb(151, 144, 253);
+    color: rgb(0, 0, 0);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #29f0f7;
 }
 
 .center-text {
@@ -103,12 +109,11 @@ challenge {
 }
 
 button {
-    background-color: rgb(255, 219, 173);
+    background-color: rgb(0, 3, 160);
     padding: .2em;
     margin-left: 1em;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    border-radius: 0px;
     color: #fff;
     font-family: 'Consolas';
     /*Oswald is a great font*/
@@ -118,5 +123,20 @@ button {
 }
 
 button:hover {
-    background-color: rgb(255, 190, 51);
+    background-color: rgb(75, 228, 255);
+}
+
+.keyword {
+    color:rgb(75, 228, 255);
+    display: inline;
+}
+
+.class {
+    color:rgb(75, 255, 99);
+    display: inline;
+}
+
+.var {
+    color:rgb(255, 246, 115);
+    display: inline;
 }
