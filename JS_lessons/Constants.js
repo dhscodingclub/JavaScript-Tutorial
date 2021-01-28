@@ -11,8 +11,7 @@ const lessonSkipCodes =
         "t86zliq", //8
         "3icw2hsF",
         "kf53ia8r", //10
-        "3c05d1le",
-        "78ka1pow" //12
+        "3c05d1le", //end page
     ];
 const desiredOutputs =
     [
@@ -26,7 +25,8 @@ const desiredOutputs =
         ["Batman lives in Gotham City", "color"], //7
         [[180,70,10,160,50,120,40]] //8
         ["This car is a blue Toyota from 2002 with a plate number of 12345"], //9
-        ["Arden", 11, 3.7] //10
+        ["Arden", 11, 3.7], //10,
+        ["sfdlfd"] //end page
     ];
 const requiredKeywords =
     [
@@ -40,5 +40,6 @@ const requiredKeywords =
         ["var", "name", "city", ";", " lives in ", "console.log(name", "+"],//7
         ["array[i] =", "function", "10", "*", ".length", "=0", "for", "return", "console.log(", "[18, 7, 1, 16, 5, 12, 4]"], //8
         ["var", "car", "brand", "Toyota", "plateNumber", "12345", "color", "blue", "displayInfo", "function()", "console.log", "car.displayInfo()"],//9
-        ["class", "Student", "constructor", "name", "grade", "gpa", "this.", "graduate", "changeGPA", "rollCall", "var", "Arden", "new", "10", "3.9", "3.7", ".graduate();", ".changeGPA(", ".rollCall();"] //10
+        ["class", "Student", "constructor", "name", "grade", "gpa", "this.", "graduate", "changeGPA", "rollCall", "var", "Arden", "new", "10", "3.9", "3.7", ".graduate();", ".changeGPA(", ".rollCall();"], //10
+        ["xyzw"] //end page
     ];

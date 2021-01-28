@@ -70,12 +70,12 @@
     });
     let next = document.getElementById("next");
     next.addEventListener("click", () => {
-        lessonNumber++;
-        refreshLessonPage();
-        /*if (lessonNumber < highestLesson) {
+        // lessonNumber++;
+        // refreshLessonPage();
+        if (lessonNumber < highestLesson) {
             lessonNumber++;
             refreshLessonPage();
-        }*/
+        }
         //don't surpass the top lesson; that's cheatin'
     })
     let jumper = document.getElementById("jump");
