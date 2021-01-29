@@ -40,7 +40,7 @@
 <script>
     var rightC = document.getElementById("right");
     balanceColumns();
-    function balanceColumns(){
+    function balanceColumns() {
         let code = document.getElementById("code");
         code.style.height = (rightC.offsetHeight - 15) + "px";
     }
@@ -163,8 +163,10 @@
                 //We passed!
                 Grade.innerHTML = `<p>Congratulations, your code built successfully and had the correct output!</p><p><img src="../Checkmark.png" height=15><button onclick="nextLesson();">Next Lesson</button></p>`;
             } else {
-                Grade.innerHTML = `<p>The console output is correct, but you have not coded it properly. Please edit your code, making sure that you have followed all instructions, and try again. Taking "shortcuts" are not allowed for passing the lesson.</p>
-                <p style="color: red">Incorrect<img src="../Fail.png" height=15></p>`;
+                displayConsole.value += `\n\nThe console output is correct, but you have not coded it properly. Please edit your code, making sure that you have followed all instructions, and try again. Taking "shortcuts" are not allowed for passing the lesson.`;
+
+                Grade.innerHTML = `<p>The inputted code is not complete.\nPlease edit your code and try again.</p> 
+            <p style="color: red">Incorrect<img src="../Fail.png" height=15></p>`;
             }
         } else {
             Grade.innerHTML = `<p>The console output is not correct.\nPlease edit your code and try again.</p> 
