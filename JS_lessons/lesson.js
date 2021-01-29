@@ -1,7 +1,7 @@
 function refreshLessonPage() {
     let key = document.getElementById("lessonKey");
-    key.innerHTML = "<h2>Lesson Key: " + lessonSkipCodes[lessonNumber] + `</h2>
-    <h3>If you are a returning student, type in the key of your last lesson to enter.</h3>`;
+    key.innerHTML = "<p>Lesson Key: " + lessonSkipCodes[lessonNumber] + `</p>
+    <p>If you are a returning student, type in the key of your last lesson to enter.</p>`;
     let lessonSection = document.getElementById("lesson");
     let logoLink = "../js_icon.png";
     if (lessonNumber == 0) {
@@ -242,7 +242,7 @@ function refreshLessonPage() {
         `<div class="center-text">
         <h1>Congratulations!</h1>
         <img src="../js_icon.png" height=150>
-        <h2>You are now an unofficial JavaScript master</h2>
+        <h2>You are now an unofficial JavaScript master!</h2>
         </div>
         `;
         //document.getElementById("codeLandStuff").innerHTML = "";
