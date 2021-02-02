@@ -1,7 +1,7 @@
 function refreshLessonPage() {
     let key = document.getElementById("lessonKey");
     key.innerHTML = "<p><b>Lesson Key: " + lessonSkipCodes[lessonNumber] + `</b></p>
-    <p>If you are a returning student, type in the key of your last lesson to enter.</p>`;
+    <p><b>If you are a returning student, type in the key of your last lesson to enter.</b></p>`;
     let lessonSection = document.getElementById("lesson");
     let logoLink = "../js_icon.png";
     if (lessonNumber == 0) {
