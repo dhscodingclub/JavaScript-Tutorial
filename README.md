@@ -1,4 +1,4 @@
-# CodingClub2020JavaScriptTutorial
-Official website for 2020 Coding Club JavaScript tutorial. 
-
-Tony, Arden Z, and Nathan F are the developers for this project
+# DHS Coding Club Project
+JavaScript Tutorial
+Developers: Antony Zhao, Arden Zarins, Nathan Fanous.
+Completed: February 2nd, 2020.
