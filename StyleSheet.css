@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 div.field {
     font-family: 'Consolas';
     font-size: 20px;
