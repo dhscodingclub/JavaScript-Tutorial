@@ -39,8 +39,7 @@ textarea {
 }
 
 body {
-    padding-left: 50px;
-    padding-right: 50px;
+    margin: 50px;
 }
 
 .column {
