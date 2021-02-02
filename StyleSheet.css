@@ -37,7 +37,7 @@ textarea {
     font-family: consolas;
     font-size: 20px;
 }
-
+/*
 ::selection {
     background: rgb(255, 244, 96);;
     /* WebKit/Blink Browsers */
@@ -47,7 +47,7 @@ textarea {
     background: rgb(255, 244, 96);;
     /* Gecko Browsers */
 }
-
+*/
 body {
     background-color: white;
     padding-left: 50px;
